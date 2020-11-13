@@ -12,7 +12,13 @@
           <img src="{{url('public')}}/dist/img/photo3.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Endang Lestari</a>
+          <a href="#" class="d-block">
+            @if(Auth::check())
+             {{request()->user()->nama}}
+            @else
+              Silahkan Login
+            @endif
+          </a>
         </div>
       </div>
 
@@ -52,6 +58,14 @@
               <i class="nav-icon fas fa-columns"></i>
               <p>
                 User
+              </p>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a href="{{url('register')}}" class="nav-link">
+              <i class="nav-icon fas fa-columns"></i>
+              <p>
+                Registrasi
               </p>
             </a>
           </li>

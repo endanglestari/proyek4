@@ -13,7 +13,9 @@ class KategoriController extends Controller {
 	}
 	function store(){
 		$kategori = new Kategori;
+		$kategori->jenis = request('jenis');
 		$kategori->nama = request('nama');
+		$kategori->stok = request('stok');
 		$kategori->save();
 
 		return redirect('kategori')->with('success', 'Data Berhasil Ditambahkan');
@@ -27,7 +29,9 @@ class KategoriController extends Controller {
 		return view('kategori.edit', $data);
 	}
 	function update(Kategori $kategori){
+		$kategori->jenis = request('jenis');
 		$kategori->nama = request('nama');
+		$kategori->stok = request('stok');
 		$kategori->save();
 
 		return redirect('kategori');

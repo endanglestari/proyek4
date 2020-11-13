@@ -29,7 +29,11 @@
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          Endang Lestari
+           @if(Auth::check())
+             {{request()->user()->nama}}
+            @else
+              Silahkan Login
+            @endif
           <img src="{{url('public')}}/dist/img/photo3.jpg" alt="User Avatar" style="height: 100%" class="mr-3 img-circle">
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -39,7 +43,7 @@
           <a href="#" class="dropdown-item">
             <i class="fa fa-cog"></i> Setting
           </a>
-         <a href="{{url('login')}}" class="dropdown-item">
+         <a href="{{url('logout')}}" class="dropdown-item">
             <i class="fa fa-sign-out"></i> Log Out
           </a>
     </ul>

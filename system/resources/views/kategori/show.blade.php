@@ -10,7 +10,13 @@
 					 Detail Nama Kategori
 					</div>
 					<div class="card-body">
+						<h3>{{$kategori->jenis}}</h3>
+					</div>
+					<div class="card-body">
 						<h3>{{$kategori->nama}}</h3>
+					</div>
+					<div class="card-body">
+						<h3>{{$kategori->stok}}</h3>
 					</div>
 				</div>
 			</div>

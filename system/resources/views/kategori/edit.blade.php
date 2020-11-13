@@ -14,8 +14,16 @@
 							@csrf
 							@method("PUT")
 						<div class="form-group">
+							<label for="" class="conrol-label">Jenis</label>
+							<input type="text" class="form-control" name="jenis" value="{{$kategori->jenis}}">
+						</div>
+						<div class="form-group">
 							<label for="" class="conrol-label">Nama</label>
 							<input type="text" class="form-control" name="nama" value="{{$kategori->nama}}">
+						</div>
+						<div class="form-group">
+							<label for="" class="conrol-label">Stok</label>
+							<input type="text" class="form-control" name="stok" value="{{$kategori->stok}}">
 						</div>
 						<button class="btn btn-dark float-right"><span class="fa fa-save"></span>  Save </button>
 						</form>

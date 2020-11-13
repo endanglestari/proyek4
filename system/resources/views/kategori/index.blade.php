@@ -16,7 +16,9 @@
 								<hr>
 								<th>No</th>
 								<th>Aksi</th>
+								<th>Jenis</th>
 								<th>Nama</th>
+								<th>stok</th>
 							</thead>
 							<tbody>
 								@foreach($list_kategori as $kategori)
@@ -29,7 +31,9 @@
 										@include('template.utils.delete', ['url' => url('kategori', $kategori->id)])
 									</div>
 									</td>
-									<td>{{$kategori->nama}}</td>	
+									<td>{{$kategori->jenis}}</td>
+									<td>{{$kategori->nama}}</td>
+									<td>{{$kategori->stok}}</td>	
 								</tr>
 								@endforeach
 							</tbody>

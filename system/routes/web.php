@@ -6,6 +6,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,6 @@ Route::get('/', function () {
 });
 
 Route::get('beranda', [HomeController::class, 'showBeranda']);
-Route::get('register', [HomeController::class, 'showRegister']);
 
 Route::get('produk', [ProdukController::class, 'index']);
 Route::get('produk/create', [ProdukController::class, 'create']);
@@ -54,3 +54,12 @@ Route::delete('user/{user}', [UserController::class, 'destroy']);
 
 Route::get('login', [AuthController::class, 'showLogin']);
 Route::post('login', [AuthController::class, 'loginProcess']);
+Route::get('logout', [AuthController::class, 'logout']);
+
+Route::get('register', [RegisterController::class, 'index']);
+Route::get('register/create', [RegisterController::class, 'create']);
+Route::post('register', [RegisterController::class, 'store']);
+Route::get('register/{register}', [RegisterController::class, 'show']);
+Route::get('register/{register}/edit', [RegisterController::class, 'edit']);
+Route::put('register/{register}', [RegisterController::class, 'update']);
+Route::delete('register/{register}', [RegisterController::class, 'destroy']);
