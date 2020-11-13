@@ -29,7 +29,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{url('beranda')}}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                Beranda
                 <span class="right badge badge-danger"></span>
@@ -55,7 +55,7 @@
           </li>
           <li class="nav-item">
             <a href="{{url('user')}}" class="nav-link">
-              <i class="nav-icon fas fa-columns"></i>
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 User
               </p>
@@ -63,7 +63,7 @@
           </li>
            <li class="nav-item">
             <a href="{{url('register')}}" class="nav-link">
-              <i class="nav-icon fas fa-columns"></i>
+              <i class="nav-icon fas fa-edit"></i>
               <p>
                 Registrasi
               </p>

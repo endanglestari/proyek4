@@ -5,10 +5,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('public')}}" class="nav-link">Beranda</a>
+        <a href="{{url('beranda')}}" class="nav-link">Beranda</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('public')}}" class="nav-link">Kontak</a>
+        <a href="{{url('kontak')}}" class="nav-link">Kontak</a>
       </li>
     </ul>
 
@@ -43,8 +43,8 @@
           <a href="#" class="dropdown-item">
             <i class="fa fa-cog"></i> Setting
           </a>
-         <a href="{{url('logout')}}" class="dropdown-item">
-            <i class="fa fa-sign-out"></i> Log Out
+         <a href="{{url('login')}}" class="dropdown-item">
+            <i class="fa fa-sign-out-alt"></i> Log Out
           </a>
     </ul>
   </nav>

@@ -24,6 +24,8 @@ Route::get('/', function () {
 });
 
 Route::get('beranda', [HomeController::class, 'showBeranda']);
+Route::get('kontak', [HomeController::class, 'showKontak']);
+
 
 Route::get('produk', [ProdukController::class, 'index']);
 Route::get('produk/create', [ProdukController::class, 'create']);
@@ -55,6 +57,7 @@ Route::delete('user/{user}', [UserController::class, 'destroy']);
 Route::get('login', [AuthController::class, 'showLogin']);
 Route::post('login', [AuthController::class, 'loginProcess']);
 Route::get('logout', [AuthController::class, 'logout']);
+
 
 Route::get('register', [RegisterController::class, 'index']);
 Route::get('register/create', [RegisterController::class, 'create']);

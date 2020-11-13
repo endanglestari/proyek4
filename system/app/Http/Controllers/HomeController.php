@@ -25,4 +25,8 @@ class HomeController extends Controller {
 		return view('user');
 	}
 
+	function showKontak(){
+		return view('kontak');
+	}
+
 }
