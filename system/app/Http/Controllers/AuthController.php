@@ -18,7 +18,8 @@ class AuthController extends Controller
 	}
 
 	function logout(){
-
+		Auth::logout();
+		return redirect('beranda');
 	}
 
 	function registration(){
@@ -28,4 +29,5 @@ class AuthController extends Controller
 	function forgotPassword(){
 
 	}
+	
 }

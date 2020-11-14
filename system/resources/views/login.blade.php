@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="{{url('public')}}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{url('public')}}/dist/css/adminlte.min.css">
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -66,6 +67,7 @@
         <a href="{{url('register')}}" class="text-center">Register a new membership</a>
       </p>
     </div>
+    
     <!-- /.card-body -->
   </div>
   <!-- /.card -->
