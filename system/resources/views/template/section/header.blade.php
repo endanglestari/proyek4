@@ -24,6 +24,7 @@
       </div>
     </form>
 
+
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
@@ -31,8 +32,6 @@
         <a class="nav-link" data-toggle="dropdown" href="#">
            @if(Auth::check())
              {{request()->user()->nama}}
-            @else
-              Silahkan Login
             @endif
           <img src="{{url('public')}}/dist/img/photo3.jpg" alt="User Avatar" style="height: 100%" class="mr-3 img-circle">
         </a>

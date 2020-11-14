@@ -43,4 +43,5 @@ class UserController extends Controller {
 
 		return redirect('user')->with('danger', 'Data Berhasil Dihapus');
 	}
+	
 }

@@ -2,4 +2,5 @@
 	@csrf
 	@method("delete")
 	<button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+	
 </form>

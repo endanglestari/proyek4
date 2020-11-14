@@ -12,4 +12,5 @@ class User extends Authenticatable
       protected $table = 'user';
     use HasFactory, Notifiable;
 
+
 }

@@ -4,6 +4,7 @@
       <span class="brand-text font-weight-light">Admin Vegefoods</span>
     </a>
 
+
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
@@ -14,9 +15,7 @@
         <div class="info">
           <a href="#" class="d-block">
             @if(Auth::check())
-             {{request()->user()->nama}}
-            @else
-              Silahkan Login
+             {{request()->user()->nama}}    
             @endif
           </a>
         </div>

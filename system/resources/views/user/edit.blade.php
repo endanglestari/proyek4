@@ -4,7 +4,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 mt-5">
 				<div class="card">
 					<div class="card-header">
 					 Edit Data User
@@ -29,12 +29,13 @@
 							<label for="" class="conrol-label">Password</label>
 							<input type="password" class="form-control" name="password">
 						</div>
-						<button class="btn btn-dark float-right"><span class="mdi mdi-content-save-all"></span>  Save </button>
+						<button class="btn btn-dark float-right"><span class="fa fa-save"></span>  Save </button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>	
 	</div>
+
 
 @endsection
