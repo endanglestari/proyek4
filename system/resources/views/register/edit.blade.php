@@ -10,7 +10,7 @@
 					 Edit Data Registrasi Admin
 					</div>
 					<div class="card-body">
-						<form action="{{url('register', $register->id)}}" method="post">
+						<form action="{{url('admin/register', $register->id)}}" method="post">
 							@csrf
 							@method('PUT')
 						<div class="form-group">

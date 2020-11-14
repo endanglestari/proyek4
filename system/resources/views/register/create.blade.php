@@ -10,7 +10,7 @@
 					 Tambah Data Registrasi
 					</div>
 					<div class="card-body">
-						<form action="{{url('register')}}" method="post">
+						<form action="{{url('admin/register')}}" method="post">
 							@csrf
 						<div class="form-group">
 							<label for="" class="conrol-label">Nama</label>

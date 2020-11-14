@@ -8,7 +8,7 @@
 				<div class="card">
 					<div class="card-header">
 					 Data Registrasi
-					 <a href="{{url('register/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i> Tambah Data Registrasi</a>
+					 <a href="{{url('admin/register/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i> Tambah Data Registrasi</a>
 					</div>
 					<div class="card-body">
 						<table class="table">
@@ -24,8 +24,8 @@
 									<td>{{$loop->iteration}}</td>
 									<td>
 										<div class="btn-group">
-										<a href="{{url('register', $register->id)}}" class="btn btn-dark"><span class="fa fa-info"></span></a>
-										<a href="{{url('register', $register->id)}}/edit" class="btn btn-warning"><span class="fa fa-edit"></span></a>
+										<a href="{{url('admin/register', $register->id)}}" class="btn btn-dark"><span class="fa fa-info"></span></a>
+										<a href="{{url('admin/register', $register->id)}}/edit" class="btn btn-warning"><span class="fa fa-edit"></span></a>
 										@include('template.utils.delete', ['url' => url('register', $register->id)])
 									</div>
 									</td>

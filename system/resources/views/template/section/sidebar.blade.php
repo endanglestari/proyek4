@@ -15,7 +15,9 @@
         <div class="info">
           <a href="#" class="d-block">
             @if(Auth::check())
-             {{request()->user()->nama}}    
+             {{request()->user()->nama}}
+             @else
+             Silahkan Login    
             @endif
           </a>
         </div>
@@ -27,7 +29,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{url('beranda')}}" class="nav-link">
+            <a href="{{url('admin/beranda')}}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                Beranda
@@ -36,7 +38,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('produk')}}" class="nav-link">
+            <a href="{{url('admin/produk')}}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Produk
@@ -45,7 +47,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('kategori')}}" class="nav-link">
+            <a href="{{url('admin/kategori')}}" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Kategori
@@ -53,7 +55,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('user')}}" class="nav-link">
+            <a href="{{url('admin/user')}}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 User
@@ -61,7 +63,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="{{url('register')}}" class="nav-link">
+            <a href="{{url('admin/register')}}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Registrasi
