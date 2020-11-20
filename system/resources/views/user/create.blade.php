@@ -28,6 +28,10 @@
 							<label for="" class="conrol-label">Password</label>
 							<input type="password" class="form-control" name="password">
 						</div>
+						<div class="form-group">
+							<label for="" class="conrol-label">No HP</label>
+							<input type="text" class="form-control" name="no_headphone">
+						</div>
 						<button class="btn btn-dark float-right"><span class="fa fa-save"></span>  Save </button>
 						</form>
 					</div>

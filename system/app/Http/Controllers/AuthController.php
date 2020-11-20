@@ -19,7 +19,7 @@ class AuthController extends Controller
 
 	function logout(){
 		Auth::logout();
-		return redirect('admin/beranda');
+		return redirect('beranda');
 	}
 
 	function registration(){

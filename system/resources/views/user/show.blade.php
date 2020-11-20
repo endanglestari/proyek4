@@ -18,6 +18,10 @@
 						<h4>
 							Email : {{$user->email}}
 						</h4> 
+						<h4>
+							No Headphone : {{$user->detail->no_headphone}}
+						</h4> 
+					</div>
 					</div>
 				</div>
 			</div>

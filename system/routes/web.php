@@ -23,18 +23,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('beranda', [HomeController::class, 'showBeranda']);
+Route::get('kontak', [HomeController::class, 'showKontak']);
 
 
 Route::prefix('admin')->middleware('auth')->group(function(){
-	
-	Route::get('beranda', [HomeController::class, 'showBeranda']);
-	Route::get('kontak', [HomeController::class, 'showKontak']);
+	Route::post('produk/filter', [ProdukController::class, 'filter']);
+	Route::post('kategori/filter', [KategoriController::class, 'filter']);
 	Route::resource('produk', ProdukController::class);
 	Route::resource('kategori', KategoriController::class);
 	Route::resource('user', UserController::class);
 	Route::resource('register', RegisterController::class);
-
 });
+
 
 Route::get('login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('login', [AuthController::class, 'loginProcess']);
