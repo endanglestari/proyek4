@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\UserDetail;
 
 class UserController extends Controller {
 	function index(){
-		$data['list_user'] = User::all();
+		//Yang Mempunyai Data
+		//$data['list_user'] = User::has('produk')->get();
+		$data['list_user'] = User::withCount('produk')->get();
 		return view('user.index', $data);
 	}
 	function create(){
@@ -19,7 +22,12 @@ class UserController extends Controller {
 		$user->password = bcrypt(request('password'));
 		$user->save();
 
-		return redirect('user')->with('success', 'Data Berhasil Ditambahkan');
+		$userDetail = new UserDetail;
+		$userDetail->id_user = $user->id;
+		$userDetail->no_headphone = request('no_headphone');
+		$userDetail->save();
+
+		return redirect('admin/user')->with('success', 'Data Berhasil Ditambahkan');
 	}
 	function show(User $user){
 		$data['user'] = $user;
@@ -36,12 +44,12 @@ class UserController extends Controller {
 		if(request('password')) $user->password = bcrypt(request('password'));
 		$user->save();
 
-		return redirect('user')->with('success', 'Data Berhasil Diedit');
+		return redirect('admin/user')->with('success', 'Data Berhasil Diedit');
 	}
 	function destroy(User $user){
 		$user->delete();
 
-		return redirect('user')->with('danger', 'Data Berhasil Dihapus');
+		return redirect('admin/user')->with('danger', 'Data Berhasil Dihapus');
 	}
 	
 }
