@@ -17,7 +17,7 @@
 								<th>Aksi</th>
 								<th>Username</th>
 								<th>Nama</th>
-								<th>Produk</th>	
+								<th>Jenis Kelamin</th>	
 								<th>Email</th>	
 							</thead>
 							<tbody>
@@ -26,14 +26,14 @@
 									<td>{{$loop->iteration}}</td>
 									<td>
 										<div class="btn-group">
-										<a href="{{url('admin/user', $user->id)}}" class="btn btn-dark"><span class="fa fa-info"></span></a>
-										<a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-warning"><span class="fa fa-edit"></span></a>
+										<a href="{{url('admin/user', $user->id)}}" class="btn btn-dark"><span class="fa fa-info"></span></a>&nbsp 
+										<a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-warning"><span class="fa fa-edit"></span></a> &nbsp
 										@include('template.utils.delete', ['url' => url('user', $user->id)])
 									</div>
 									</td>
 									<td>{{$user->username}}</td>
 									<td>{{$user->nama}}</td>
-									<td>{{$user->produk_count}}</td>
+									<td>{{$user->jenis_kelamin_string}}</td>
 									<td>{{$user->email}}</td>
 								</tr>
 								@endforeach

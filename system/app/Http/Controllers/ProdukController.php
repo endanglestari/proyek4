@@ -22,7 +22,7 @@ class ProdukController extends Controller {
 		$produk->stok = request('stok');
 		$produk->deskripsi = request('deskripsi');
 		$produk->save();
-
+        
 		return redirect('admin/produk')->with('success', 'Data Berhasil Ditambahkan');
 	}
 	function show(Produk $produk){

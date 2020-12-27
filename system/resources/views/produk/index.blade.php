@@ -53,15 +53,17 @@
 								<th>Harga</th>
 								<th>Berat</th>
 								<th>Stok</th>
+							
 							</thead>
 							<tbody>
 								@foreach($list_produk as $produk)
 								<tr>
 									<td>{{$loop->iteration}}</td>
 									<td>
+									
 										<div class="btn-group">
-										<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-dark"><span class="fa fa-info"></span></a>
-										<a href="{{url('admin/produk', $produk->id)}}/edit" class="btn btn-warning"><span class="fa fa-edit"></span></a>
+										<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-dark"><span class="fa fa-info"></span></a> &nbsp
+										<a href="{{url('admin/produk', $produk->id)}}/edit" class="btn btn-warning"><span class="fa fa-edit"></span></a> &nbsp
 										@include('template.utils.delete', ['url' => url('admin/produk', $produk->id)])
 									</div>
 									</td>
