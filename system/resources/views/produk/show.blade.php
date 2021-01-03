@@ -12,15 +12,13 @@
 					<div class="card-body">
 						<h3>{{$produk->nama}}</h3>
 						<hr>
-						<h4>
-							{{$produk->harga}} |
-							Stok : {{$produk->stok}} pc |
-							Berat : {{$produk->berat}} gr |
-							Seller : {{$produk->seller->nama}} |
-							Tanggal Produk : {{$produk->created_at->diffForHumans()}}
-						</h4> <br>
+						@include('produk.show.detail')
+						 <br>
 						<p>
 							{!! nl2br($produk->deskripsi) !!}
+						</p>
+						<p>
+							<img src="{{url("public/$produk->foto")}}" alt=" ">
 						</p>
 					</div>
 				</div>
