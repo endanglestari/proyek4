@@ -18,6 +18,9 @@
 					<div class="card-body">
 						<h3>{{$kategori->stok}}</h3>
 					</div>
+					<div class="card-body">
+						<img src="{{url("public/$kategori->foto")}}" alt=" ">
+					</div>
 				</div>
 			</div>
 		</div>	

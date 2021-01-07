@@ -16,6 +16,12 @@
           <a href="#" class="d-block">
             @if(Auth::check())
              {{request()->user()->nama}}
+             @elseif(Auth::guard('pembeli')->check())
+              {{Auth::guard('pembeli')->user()->nama}}
+              <br>Pembeli
+             @elseif(Auth::guard('penjual')->check())
+              {{Auth::guard('penjual')->user()->nama}}
+             <br>Penjual
              @else
              Silahkan Login    
             @endif
@@ -42,6 +48,15 @@
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Produk
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('admin/product')}}" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                Product
                 <span class="badge badge-info right"></span>
               </p>
             </a>

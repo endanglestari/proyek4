@@ -33,7 +33,6 @@ Route::get('kontak', [HomeController::class, 'showKontak']);
 Route::get('setting', [SettingController::class, 'index']);
 Route::post('setting', [SettingController::class, 'store']);
 
-
 Route::prefix('admin')->middleware('auth')->group(function(){
 	Route::post('produk/filter', [ProdukController::class, 'filter']);
 	Route::post('kategori/filter', [KategoriController::class, 'filter']);

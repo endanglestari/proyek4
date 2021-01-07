@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Kategori;
+use Faker;
 
 class KategoriController extends Controller {
 	function index(){
@@ -17,6 +18,8 @@ class KategoriController extends Controller {
 		$kategori->nama = request('nama');
 		$kategori->stok = request('stok');
 		$kategori->save();
+
+		$kategori->handleUploadFoto();
 
 		return redirect('kategori')->with('success', 'Data Berhasil Ditambahkan');
 	}
@@ -34,9 +37,12 @@ class KategoriController extends Controller {
 		$kategori->stok = request('stok');
 		$kategori->save();
 
+		$kategori->handleUploadFoto();
+
 		return redirect('kategori');
 	}
 	function destroy(Kategori $kategori){
+		$kategori->handleDelete();
 		$kategori->delete();
 
 		return redirect('kategori');
