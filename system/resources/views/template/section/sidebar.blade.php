@@ -52,15 +52,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{url('admin/product')}}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Product
-                <span class="badge badge-info right"></span>
-              </p>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a href="{{url('admin/kategori')}}" class="nav-link">
               <i class="nav-icon far fa-image"></i>

@@ -8,7 +8,7 @@
         <a href="{{url('beranda')}}" class="nav-link">Beranda</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('kontak')}}" class="nav-link">Kontak</a>
+        <a href="{{url('alamat')}}" class="nav-link">Alamat</a>
       </li>
     </ul>
 
