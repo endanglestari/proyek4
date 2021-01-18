@@ -1,4 +1,4 @@
- <nav class="main-header navbar navbar-expand navbar-info navbar-light">
+ <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -8,7 +8,7 @@
         <a href="{{url('beranda')}}" class="nav-link">Beranda</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{url('alamat')}}" class="nav-link">Alamat</a>
+        <a href="{{url('admin/kontak')}}" class="nav-link">Kontak</a>
       </li>
     </ul>
 
@@ -31,7 +31,7 @@
            @if(Auth::check())
              {{request()->user()->nama}}
              @else
-             Pembeli
+             Silahkan Login
             @endif
           <img src="{{url('public')}}/dist/img/photo3.jpg" alt="User Avatar" style="height: 100%" class="mr-3 img-circle">
         </a>

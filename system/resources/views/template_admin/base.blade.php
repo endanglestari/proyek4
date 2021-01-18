@@ -37,11 +37,11 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-   @include('template_client.header')
+   @include('template_admin.section.header')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('template_client.sidebar')
+  @include('template_admin.section.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
     <div class="main-panel">
@@ -49,7 +49,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  @include('template.utils.notif')
+                  @include('template_admin.utils.notif')
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-   @include('template_client.footer')
+   @include('template_admin.section.footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

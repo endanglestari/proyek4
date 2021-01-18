@@ -16,6 +16,10 @@ class HomeController extends Controller {
 		return view('berandaa');
 	}
 
+	function showHome(){
+		return view('home');
+	}
+
 	function showKontak(){
 		return view('kontak');
 	}

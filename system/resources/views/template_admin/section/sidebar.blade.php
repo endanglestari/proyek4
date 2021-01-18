@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-info-primary elevation-4">
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <span class="brand-text font-weight-light">Amira Souvenir</span>
@@ -16,8 +16,14 @@
           <a href="#" class="d-block">
             @if(Auth::check())
              {{request()->user()->nama}}
+             @elseif(Auth::guard('pembeli')->check())
+              {{Auth::guard('pembeli')->user()->nama}}
+              <br>Pembeli
+             @elseif(Auth::guard('penjual')->check())
+              {{Auth::guard('penjual')->user()->nama}}
+             <br>Penjual
              @else
-             Pembeli    
+             Silahkan Login    
             @endif
           </a>
         </div>
@@ -29,7 +35,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{url('berandaa')}}" class="nav-link">
+            <a href="{{url('beranda')}}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                Beranda
@@ -38,7 +44,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('produk-collection')}}" class="nav-link">
+            <a href="{{url('product')}}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Produk
@@ -47,10 +53,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('cart')}}" class="nav-link">
-              <i class="nav-icon fas fa-cart-plus"></i>
+            <a href="{{url('admin/user')}}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
               <p>
-                Cart
+                User
               </p>
             </a>
           </li>

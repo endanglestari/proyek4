@@ -1,6 +1,4 @@
-@inject('timeService', 'App\Services\TimeServices')
-
-@extends('template.base')
+@extends('template_admin.base')
 
 @section('content')
 
@@ -9,27 +7,7 @@
 			<div class="col-md-12 mt-5">
 				<div class="card">
 					<div class="card-header">
-						<div class="float-right">
-						Jam : {{$timeService->showTimeNow()}}
-						</div>
-						Filter
-
-					</div>
-					<div class="card-body">
-						<form action="{{url('admin/produk/filter')}}" method="post">
-							@csrf
-							<div class="form-group">
-								<label for="" class="control-label">Nama</label>
-								<input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
-							</div>
-							<button class="btn btn-dark float-right"><i class="fa fa-search"></i> Filter</button>
-						</form>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header">
 					 Data Produk
-					 <a href="{{url('admin/produk/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i> Tambah Data</a>
 					</div>
 					<div class="card-body">
 						<table class="table table-datatable">
@@ -51,7 +29,6 @@
 									
 										<div class="btn-group">
 										<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-dark"><span class="fa fa-info"></span></a> &nbsp
-										<a href="{{url('admin/produk', $produk->id)}}/edit" class="btn btn-warning"><span class="fa fa-edit"></span></a> &nbsp
 										@include('template.utils.delete', ['url' => url('admin/produk', $produk->id)])
 									</div>
 									</td>

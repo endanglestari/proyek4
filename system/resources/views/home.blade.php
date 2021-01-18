@@ -1,4 +1,4 @@
-@extends('template.base')
+@extends('template_admin.base')
 
 @section('content')
     <div class="col-md-12 ftco-animate text-center">

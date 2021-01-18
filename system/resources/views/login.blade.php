@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Vegefoods</title>
+  <title>Amira Souvenir</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -20,7 +20,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="{{url('beranda')}}" class="h1"><b>Admin</b>Vegefoods</a>
+      <a href="{{url('beranda')}}" class="h1"><b></b>Amira Souvenir</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Silahkan Masuk Untuk Memulai Sistem Anda</p>
@@ -43,6 +43,13 @@
             </div>
           </div>
         </div> 
+        <div class="input-group mb-3">
+          <select name="login_as" class="form-control">
+            <option value="1">Admin</option>
+            <option value="2">Pembeli</option>
+            <option value="3">Pengguna</option>
+          </select>
+        </div>
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">

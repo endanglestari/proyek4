@@ -27,8 +27,10 @@ Route::get('/', function () {
 });
 
 Route::get('beranda', [HomeController::class, 'showBeranda']);
+Route::get('home', [HomeController::class, 'showHome']);
 Route::get('beranda/{status}', [HomeController::class, 'showBeranda']);
 Route::get('kontak', [HomeController::class, 'showKontak']);
+
 
 Route::get('setting', [SettingController::class, 'index']);
 Route::post('setting', [SettingController::class, 'store']);
@@ -57,3 +59,5 @@ Route::get('produk-collection', [ClientController::class, 'produkCollection']);
 Route::post('produk-collection/filter', [ClientController::class, 'filter']);
 Route::get('kategori-collection', [ClientController::class, 'kategoriCollection']);
 Route::get('berandaa', [HomeController::class, 'showBerandaa']);
+Route::get('detail', [ClientController::class, 'show']);
+Route::get('cart', 'ClientController@cart');

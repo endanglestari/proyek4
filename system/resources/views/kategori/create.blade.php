@@ -20,13 +20,6 @@
 							<label for="" class="conrol-label">Nama</label>
 							<input type="text" class="form-control" name="nama">
 						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-								<label for="" class="conrol-label">Foto</label>
-								<input type="file" class="form-control" name="foto" accept=".png">
-								</div>
-							</div>
 						<div class="form-group">
 							<label for="" class="conrol-label">Stok</label>
 							<input type="text" class="form-control" name="stok">

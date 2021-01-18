@@ -1,7 +1,7 @@
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <span class="brand-text font-weight-light">Admin Vegefoods</span>
+      <span class="brand-text font-weight-light">Amira Souvenir</span>
     </a>
 
 
@@ -52,15 +52,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{url('admin/product')}}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Product
-                <span class="badge badge-info right"></span>
-              </p>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a href="{{url('admin/kategori')}}" class="nav-link">
               <i class="nav-icon far fa-image"></i>

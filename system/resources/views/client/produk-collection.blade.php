@@ -4,13 +4,13 @@
 
 	<section class="content">
 		<div class="container-fluid">
-		  <div class="col-md-12 mt-5">
+		  <div class="col-md-4 mt-5">
 			<div class="card-header bg-info">
-				Produk Vegefoods
+				Produk Amira Sovenir
 			</div>
 		 </div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-4">
 					<div class="card">
 						<div class="card-body">
 							<form action="{{url('produk-collection/filter')}}" method="post">
@@ -18,10 +18,6 @@
 								<div class="form-group">
 									<label for="" class="control-label">Nama</label>
 									<input type="text" name="nama" class="form-control" value="{{$nama ??""}}">
-								</div>
-								<div class="form-group">
-									<label for="" class="control-label">Harga</label>
-									<input type="text" name="harga" class="form-control" value="{{$harga ??""}}">
 								</div>
 								<button class="btn btn-info float-right btn-sm"><i class="fa fa-search"></i>Filter</button>
 							</form>
@@ -40,6 +36,7 @@
 								<span class="info-box-text">{{$produk->nama}}</span>
 								<span class="info-box-number">Harga :{{$produk->harga_string}}</span>
 								<span class="info-box-text">Berat :{{$produk->berat}}</span>
+								<a href="{{url('cart', $produk->id)}}" class="btn btn-info"> <i class="nav-icon fas fa-cart-plus"></i>Add To Cart</a> 
 							</div>
 						</div>
 					</div>
@@ -73,7 +70,7 @@
 									<div class="card-body">
 										<h3>{{$produk->nama}}</h3>
 										<hr>
-										@include('produk.show.detail')
+										@include('client.produk.show.detail')
 										<p>
 											{!! nl2br($produk->deskripsi)!!}
 										</p>
@@ -89,6 +86,5 @@
 		</div>
 		
 	</div>
-
 
 @endsection

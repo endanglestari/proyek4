@@ -13,18 +13,9 @@
 						<form action="{{url('admin/kategori/filter')}}" method="post">
 							@csrf
 							<div class="form-group">
-								<label for="" class="control-label">Jenis</label>
-								<input type="text" class="form-control" name="jenis" value="{{$jenis ?? ""}}">
-							</div>
-							<div class="form-group">
 								<label for="" class="control-label">Nama</label>
 								<input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
 							</div>
-							<div class="form-group">
-								<label for="" class="control-label">Stok</label>
-								<input type="text" class="form-control" name="stok" value="{{$stok ?? ""}}">
-							</div>
-						
 							<button class="btn btn-dark float-right"><i class="fa fa-search"></i> Filter</button>
 						</form>
 					</div>
